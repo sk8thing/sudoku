@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22)
+project(sudoku)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${sudoku_SOURCE_DIR}/cmake")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${sudoku_SOURCE_DIR}/bin)
+
+set(CMAKE_CXX_STANDARD 14)
+
+set(SDL2_PATH "YOUR_PATH_TO_SDL2")
+set(SDL2_IMAGE_PATH "YOUR_PATH_TO_SDL2_IMAGE")
+find_package(SDL2 REQUIRED)
+find_package(SDL2_image REQUIRED)
+include_directories(${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIR})
+
+add_executable(sudoku src/main.cpp src/Game.cpp src/Game.h src/Board.cpp src/Board.h src/Cell.cpp src/Cell.h)
+
+target_link_libraries(sudoku ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARIES})
