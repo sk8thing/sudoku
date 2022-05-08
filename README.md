@@ -12,7 +12,7 @@ After all that you can run the executable
 ./path/to/bin/sudoku.exe
 ```
 ## Controls
-WASD - move cursor\
+ARROW_UP/DOWN/LEFT/RIGHT - move cursor\
 1-9 - set value\
 RCTRL - clear value\
 RSHIFT - resets the board and generates a new one\
